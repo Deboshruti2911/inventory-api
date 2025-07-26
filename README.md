@@ -19,7 +19,7 @@ A complete RESTful API built with Node.js, Express, MongoDB, and JWT for managin
 ### 1. Clone the repository
 
 ```bash
-git clone <your-repo-url>
+git clone https://github.com/Deboshruti2911/inventory-api.git
 cd inventory-api
 ```
 
