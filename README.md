@@ -134,3 +134,5 @@ This project includes a Postman collection to test all API routes.
    - `PUT /products/:id/quantity` (requires Bearer token)
 5. Optional: Replace `Authorization` Bearer token with your own
 ```
+
+> **AI Assistance Disclosure**: This project was developed with the help of AI tools (ChatGPT) as permitted in the assignment brief. All logic and code were reviewed, tested, and understood by the author.
