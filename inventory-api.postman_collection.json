@@ -1,0 +1,183 @@
+{
+	"info": {
+		"_postman_id": "dd9e518e-86c6-408a-8d78-6e5ae821b741",
+		"name": "Inventory Management",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "45201403"
+	},
+	"item": [
+		{
+			"name": "User_registration",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4ODM3OTBiZTlhMjdkZjhmMTE0Mzg1ZSIsImlhdCI6MTc1MzQ0Njk0MSwiZXhwIjoxNzUzNTMzMzQxfQ.o5PB5jh7TReSmIl5VNcuLxquGYn_w6YrCqLMq0tBQO0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"username\":\"puja\",\r\n  \"password\":\"123\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"username\":\"puja\",\r\n  \"password\":\"123\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add_product",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4ODQxYWMxNWI1YWMzMTJiN2RjZjFmOSIsImlhdCI6MTc1MzQ5ODI5MiwiZXhwIjoxNzUzNTg0NjkyfQ.-ynaEocktrNOqP_TC_yOjS9jmolU5W3Bc_TDtvQaKqg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Samsung Galaxy S23\",\r\n    \"type\": \"Electronics\",\r\n    \"sku\": \"SGS233-002\",\r\n    \"image_url\": \"https://example.com/galaxy-s23.jpg\",\r\n    \"description\": \"Samsung Galaxy S23, 256GB, Phantom Black\",\r\n    \"quantity\": 15,\r\n    \"price\": 749.99\r\n  }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/products",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get_product",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4ODQxYWMxNWI1YWMzMTJiN2RjZjFmOSIsImlhdCI6MTc1MzQ5ODI5MiwiZXhwIjoxNzUzNTg0NjkyfQ.-ynaEocktrNOqP_TC_yOjS9jmolU5W3Bc_TDtvQaKqg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/products",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update_product",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4ODQxYWMxNWI1YWMzMTJiN2RjZjFmOSIsImlhdCI6MTc1MzQ5ODI5MiwiZXhwIjoxNzUzNTg0NjkyfQ.-ynaEocktrNOqP_TC_yOjS9jmolU5W3Bc_TDtvQaKqg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"quantity\":35\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/products/68841bb15b5ac312b7dcf1fc/quantity",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"products",
+						"68841bb15b5ac312b7dcf1fc",
+						"quantity"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
